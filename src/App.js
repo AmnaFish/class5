@@ -1,25 +1,28 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Parent from './Parent'
+import React, { useState, useEffect,useReducer } from "react";
+import valueContext from './valueContext';
+
+// Sending down value through paretn to child, canot be sent directly to child
 
 function App() {
+  //let [number, setNumber] = useState(45);
+  let value =useState(45);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <valueContext.Provider value={value}>
+      <div>
+      Hello World
+      <Parent></Parent>
+      
+     {/* <Parent num={number}></Parent> */}
+      {/*<button onClick={() => {setNumber(++number)}}>Update Numer</button>)*/}
+      
     </div>
+
+
+    </valueContext.Provider>
+    
   );
 }
 
