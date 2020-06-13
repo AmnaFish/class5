@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Parent from './Parent'
-import React, { useState, useEffect,useReducer } from "react";
+import React, { useState } from "react";
 import valueContext from './valueContext';
 
 // Sending down value through paretn to child, canot be sent directly to child
