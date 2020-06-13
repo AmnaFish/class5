@@ -1,4 +1,4 @@
-import React, {useContext,useReducer} from "react";
+import React, {useReducer} from "react";
 import numbReducer from './numbReducer'
 //Reducer: multi changes to a state: multi component
 //use state is for perticular component
